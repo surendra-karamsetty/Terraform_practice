@@ -10,13 +10,6 @@ resource "aws_instance" "Terraform" {
   }
 }
 
-resource "aws_route53_record" "www" {
-  zone_id = variable.zone_id
-  name    = variable.name
-  type    = "A"
-  ttl     = 1
-  records = [aws_security_group.allow_tls.public_ip]
-}
 
 resource "aws_security_group" "allow_tls" {
   name        = "allow-all-terraform" # this is for AWS account
