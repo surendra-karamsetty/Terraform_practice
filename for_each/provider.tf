@@ -5,6 +5,14 @@ terraform {
       version = "6.33.0"
     }
   }
+  backend "s3" {
+    bucket         = "venkata-state-aws-88s"
+    key            = "remote-state.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    use_lockfile = true
+  }
+  
 }
 
 provider "aws" {
