@@ -7,7 +7,7 @@ terraform {
   }
   backend "s3" {
     bucket         = "venkata-state-aws-88s"
-    key            = "remote-state.tfstate"
+    key            = "for_each-state.tfstate"
     region         = "us-east-1"
     encrypt        = true
     use_lockfile = true
