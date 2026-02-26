@@ -1,3 +1,3 @@
 output "aws_amid" {
-    value = data.aws_amid.Terrform.id
+    value = data.aws_ami.Terraform.id
 }
